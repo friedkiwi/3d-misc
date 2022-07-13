@@ -4,7 +4,7 @@
 // configuration:
 hose_diameter = 168;
 receptacle_thickness = 6;
-receptacle_height = 50;
+receptacle_height = 70;
 screw_hole_diameter = 4;
 base_thickness = 4;
 receptacle_clearance = 7;
