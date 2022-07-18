@@ -15,24 +15,24 @@ shower_tube_radius = shower_tube_diameter / 2;
 difference() {
     // base
     union() {
-        translate([ 0 - (bottle_radius + bottle_clearance + shower_tube_diameter)  , 0, 0]) {
+        translate([ 0 - (bottle_radius + bottle_clearance )  , 0, 0]) {
             cylinder(holder_height, r = (bottle_radius + bottle_clearance));
         };
-        translate([0 - (bottle_radius + bottle_clearance + shower_tube_diameter), 0 - (bottle_radius + bottle_clearance), 0]) {
-            cube([bottle_diameter + 2 * bottle_clearance + shower_tube_diameter * 2, (bottle_diameter + 2 * bottle_clearance), holder_height]);
+        translate([0 - (bottle_radius + bottle_clearance ), 0 - (bottle_radius + bottle_clearance), 0]) {
+            cube([bottle_diameter + 2 * bottle_clearance, (bottle_diameter + 2 * bottle_clearance), holder_height]);
         };
-        translate([ (bottle_radius + bottle_clearance + shower_tube_diameter)  , 0, 0]) {
+        translate([ (bottle_radius + bottle_clearance )  , 0, 0]) {
             cylinder(holder_height, r = (bottle_radius + bottle_clearance));
         };
     }
     // bottle holders
-    translate([0 - (bottle_radius + bottle_clearance + shower_tube_diameter), 0, bottle_clearance]) {
+    translate([0 - (bottle_radius + bottle_clearance ), 0, bottle_clearance]) {
         cylinder(holder_height, r = bottle_radius);
         translate([0, 0, 0 - bottle_clearance - 1]) {
             cylinder(bottle_clearance + 2, r1 = drip_hole_radius, r2 = bottle_radius + 3);
         };
     }
-    translate([bottle_radius + bottle_clearance + shower_tube_diameter, 0, bottle_clearance]) {
+    translate([bottle_radius + bottle_clearance , 0, bottle_clearance]) {
         cylinder(holder_height, r = bottle_radius);
         translate([0, 0, 0 - bottle_clearance - 1]) {
             cylinder(bottle_clearance + 2, r1 = drip_hole_radius, r2 = bottle_radius + 3);
