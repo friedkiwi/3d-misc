@@ -1,7 +1,7 @@
 // soap bottle holder parametters
 bottle_diameter = 80;
 holder_height = 50;
-shower_tube_diameter = 30;
+shower_tube_diameter = 28;
 bottle_clearance = 10;
 mating_hole_size = 10;
 drip_hole_radius = 10;
